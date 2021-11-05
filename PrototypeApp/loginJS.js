@@ -7,7 +7,7 @@ function User(username, password, isAdmin){
     this.isAdmin = isAdmin;
 }
 
-function login(){
+function loginAsAdmin(){
     var adminUsername="Admin";
     var adminPassword="Admin";
 
@@ -17,6 +17,30 @@ function login(){
     if (formUsername==adminUsername && formPassword==adminPassword){
         loginCount=0;
         window.location.href='admin.html';
+    }
+    else{
+        loginCount=loginCount+1;
+        alert("Wrong Crendentials")
+    }
+    if(loginCount>2){
+        document.getElementById("loginUsername").disabled=true;
+        document.getElementById("loginPassword").disabled=true;
+        document.getElementById("adminLogin").disabled=true;
+        document.getElementById("staffLogin").disabled=true;
+        alert("Locked Out: Failed Login 3 times")
+    }
+}
+
+function loginAsStaff(){
+    var adminUsername="Admin";
+    var adminPassword="Admin";
+
+    var formUsername = document.getElementById("loginUsername").value;
+    var formPassword = document.getElementById("loginPassword").value;
+
+    if (formUsername==adminUsername && formPassword==adminPassword){
+        loginCount=0;
+        window.location.href='staff.html';
     }
     else{
         loginCount=loginCount+1;
