@@ -1,0 +1,25 @@
+html, body{
+    height: 100%;
+}
+
+label, input{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form-label{
+    display:block;
+}
+.submitButton{
+    display:block;
+    background-color: aqua;
+}
+.form-container{
+    flex-direction: row;
+    flex:0 0 auto;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+}

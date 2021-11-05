@@ -1,0 +1,23 @@
+html, body{
+    height: 100%;
+}
+
+.form-container{
+    flex:0 0 auto;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.button{
+    background-color: aqua;
+    padding: 5px 5px 5px 5px;
+}
+
+label, input{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="loginJS.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype App - Muhsin Gheeseeawon</title>
+    <link rel = stylesheet href = "css/loginCSS.css">
+</head>
+<body>
+
+<div class = "login" id = "login">
+    <h1>Login</h1>
+    <form class="form-container" id="loginForm">
+        <div>
+        <label for="loginUsername">Username: </label>
+        <input type=text placeholder="username" id = "loginUsername" required>
+        </div>
+        <div>
+        <label for="loginPassword">Password: </label>
+        <input type="text" placeholder="password" id = "loginPassword" required>
+        </div>
+
+        <input class="button" type = button value = "Log in as Admin" onclick="login()">
+        <input class="button" type = button value = "Log in as Staff">
+    </form>
+
+
+</div>
+</body>
+</html>

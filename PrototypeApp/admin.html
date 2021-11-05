@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="adminJS.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+    <link rel = stylesheet href = "css/adminCSS.css">
+</head>
+<body onload="initialView()">
+<div class = "adminPage" id = "adminPage">
+  <input class="button" type = button value = "Students" id="studentsButton" onclick="showStudentList()">
+  <input class="button" type = button value = "Staff" id="staffButton" onclick="showStaffList()">
+</div>
+
+<div class = "studentsList" id="studentsList">
+
+    <div class = "buttonContainer">
+        <input class="button" type = button value = "Add Student" id="addStudent" onclick="showStudentForm()">
+        <input class="button" type = button value = "Delete Student" id="deleteStudent">
+        <input class="button" type = button value = "Update Student" id="updateStudent">
+    </div>
+
+    <ul class="unorderedList">
+        <li><label>Mukki Ginger</label></li>
+        <li><label>Elena Balova</label></li>
+        <li><label>Eithan Aurelius</label></li>
+        <li><label>Suriel Finix</label></li>
+    </ul>
+</div>
+
+<div class = "staffList" id="staffList">
+
+    <div class = "buttonContainer">
+        <input class="button" type = button value = "Add Staff" id="addStaff" onclick="showStaffForm()">
+        <input class="button" type = button value = "Delete Staff" id="deleteStaff">
+        <input class="button" type = button value = "Update Staff" id="updateStaff">
+    </div>
+
+    <ul class="unorderedList">
+        <li><label>Muhsin Gheeseeawon</label></li>
+        <li><label>Jon Bovi</label></li>
+        <li><label>Ben Ten</label></li>
+        <li><label>Kim Possible</label></li>
+    </ul>
+</div>
+
+<div class = "studentForm" id="studentFormContainer">
+    <form class="form-container" id="addStudentForm">
+        <label class="form-label" for="studentId">Student Id: </label>
+        <input type="text" placeholder="student id" id="studentId" required>
+
+        <label class="form-label" for="StudentFirstname">First Name: </label>
+        <input type="text" placeholder="first name" id="StudentFirstname" required>
+
+        <label class="form-label" for="StudentLastname">Last Name: </label>
+        <input type="text" placeholder="last name" id="StudentLastname">
+
+        <label class="form-label" for="StudentDob">Date of Birth: </label>
+        <input type="date" placeholder="date of birth" id="StudentDob">
+
+        <label class="form-label">Gender: </label>
+        <input type="radio" name="gender" value="Male" id="StudentMale">
+        <label for ="StudentMale">Male</label>
+        <input type="radio" name="gender" value="Female" id="StudentFemale">
+        <label for ="StudentFemale">Female</label>
+        <input type="radio" name="gender" value="Other" id="StudentOther">
+        <label for ="StudentOther">Other</label>
+
+        <label class="form-label" for="department">Department: </label>
+        <select id="department" name="department">
+            <option value = "finance">Finance</option>
+            <option value = "science">Science</option>
+            <option value = "Engineering">Engineering</option>
+        </select>
+
+        <label class="form-label" for="studentEmail">Email: </label>
+        <input type="email" placeholder="email" id="studentEmail">
+
+        <input type="submit" class="submitButton" value="Add New Student">
+    </form>
+</div>
+
+<div class = "staffForm" id="staffFormContainer">
+    <form class="form-container" id="addStaffForm">
+        <label class="form-label" for="staffId">Staff Id: </label>
+        <input type="text" placeholder="staff id" id="staffId" required>
+
+        <label class="form-label" for="stafffirstname">First Name: </label>
+        <input type="text" placeholder="first name" id="staffFirstname" required>
+
+        <label class="form-label" for="stafflastname">Last Name: </label>
+        <input type="text" placeholder="last name" id="staffLastname">
+
+        <label class="form-label" for="staffdob">Date of Birth: </label>
+        <input type="date" placeholder="date of birth" id="staffDob">
+
+        <label class="form-label">Gender: </label>
+        <input type="radio" name="staffgender" value="Male" id="staffMale">
+        <label for ="staffMale">Male</label>
+        <input type="radio" name="staffgender" value="Female" id="staffFemale">
+        <label for ="staffFemale">Female</label>
+        <input type="radio" name="staffgender" value="Other" id="staffOther">
+        <label for ="staffOther">Other</label>
+
+        <label class="form-label" for="staffEmail">Email: </label>
+        <input type="email" placeholder="email" id="staffEmail">
+
+        <input type="submit" class="submitButton" value="Add New Staff">
+    </form>
+</div>
+</body>
+</html>
