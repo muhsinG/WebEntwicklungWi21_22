@@ -21,12 +21,46 @@
         <input class="button" type = button value = "Update Student" id="updateStudent">
     </div>
 
-    <ul class="unorderedList">
-        <li><label>Mukki Ginger</label></li>
-        <li><label>Elena Balova</label></li>
-        <li><label>Eithan Aurelius</label></li>
-        <li><label>Suriel Finix</label></li>
-    </ul>
+    <h3>List of Students</h3>
+    <table>
+     <tr>
+         <th>Student ID</th>
+         <th>Name</th>
+         <th>DoB</th>
+         <th>Gender</th>
+         <th>Department</th>
+     </tr>
+     <tr>
+         <th>0001</th>
+         <th>Mukki Ginger</th>
+         <th>04.11.1996</th>
+         <th>Male</th>
+         <th>Science</th>
+     </tr>
+     <tr>
+         <th>0002</th>
+         <th>Elena Balova</th>
+         <th>02.12.1993</th>
+         <th>Female</th>
+         <th>Engineering</th>
+     </tr>
+     <tr>
+         <th>0003</th>
+         <th>Eithan Aurelius</th>
+         <th>15.06.1990</th>
+         <th>Male</th>
+         <th>Finance</th>
+     </tr>
+     <tr>
+         <th>0004</th>
+         <th>Suriel Finix</th>
+         <th>01.09.1999</th>
+         <th>Male</th>
+         <th>Science</th>
+     </tr>
+    </table>
+
+
 </div>
 
 <div class = "staffList" id="staffList">
@@ -37,12 +71,39 @@
         <input class="button" type = button value = "Update Staff" id="updateStaff">
     </div>
 
-    <ul class="unorderedList">
-        <li><label>Muhsin Gheeseeawon</label></li>
-        <li><label>Jon Bovi</label></li>
-        <li><label>Ben Ten</label></li>
-        <li><label>Kim Possible</label></li>
-    </ul>
+    <h3>List of Staff</h3>
+    <table>
+        <tr>
+            <th>Staff ID</th>
+            <th>Name</th>
+            <th>DoB</th>
+            <th>Gender</th>
+        </tr>
+        <tr>
+            <th>0001</th>
+            <th>Muhsin Gheeseeawon</th>
+            <th>04.11.1996</th>
+            <th>Male</th>
+        </tr>
+        <tr>
+            <th>0002</th>
+            <th>Jon Bovi</th>
+            <th>03.10.1973</th>
+            <th>Male</th>
+        </tr>
+        <tr>
+            <th>0003</th>
+            <th>Ben Ten</th>
+            <th>26.06.1960</th>
+            <th>Male</th>
+        </tr>
+        <tr>
+            <th>0004</th>
+            <th>Kim Possible</th>
+            <th>02.04.1958</th>
+            <th>Female</th>
+        </tr>
+    </table>
 </div>
 
 <div class = "studentForm" id="studentFormContainer">
@@ -57,7 +118,10 @@
         <input type="text" placeholder="last name" id="StudentLastname">
 
         <label class="form-label" for="StudentDob">Date of Birth: </label>
-        <input type="date" placeholder="date of birth" id="StudentDob">
+        <input type="date" class="txtDate" placeholder="date of birth" id="StudentDob">
+
+        <label class="form-label" for="StudentDob">Date Joined: </label>
+        <input type="date" class="txtDate" placeholder="date joined" id="dateJoined">
 
         <label class="form-label">Gender: </label>
         <input type="radio" name="gender" value="Male" id="StudentMale">
@@ -72,6 +136,11 @@
             <option value = "finance">Finance</option>
             <option value = "science">Science</option>
             <option value = "Engineering">Engineering</option>
+        </select>
+        <label class="form-label" for="semester">Semester: </label>
+        <select id="semester" name="department">
+            <option value = "Summer">Finance</option>
+            <option value = "Winter">Science</option>
         </select>
 
         <label class="form-label" for="studentEmail">Email: </label>
